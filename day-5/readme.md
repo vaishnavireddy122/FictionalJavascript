@@ -163,10 +163,10 @@ Output:<br>
 </p>
 🔹 Accessing Form Input Values
 Task
-Get value	-->input.value
-Set value	--->input.value = "John"
-Check checkbox	---->checkbox.checked
-Get select option	--->select.value
+Get value	-->input.value<br>
+Set value	--->input.value = "John" <br>
+Check checkbox	---->checkbox.checked<br>
+Get select option	--->select.value<br>
 <h3>
  e.preventDefault():
 </h3>
