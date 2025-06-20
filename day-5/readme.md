@@ -48,15 +48,13 @@ Syntax:</p>
 Example:
 </p>
 <pre>
-  <p class="item">Item 1</p>
+<p class="item">Item 1</p>
 <p class="item">Item 2</p>
 <p class="item">Item 3</p>
 <button onclick="highlight()">Highlight</button>
-
 <script>
   function highlight() {
     const items = document.querySelectorAll(".item");
-
     items.forEach((item, index) => {
       item.style.color = "blue";
       item.innerText = "Updated Item " + (index + 1);
@@ -79,7 +77,7 @@ Example<br>
 Common Event Types
 Event	         Triggered When...
 click         	User clicks an element
-mouseover	      Mouse hovers over an element
+mouseover	     Mouse hovers over an element
 mouseout	      Mouse leaves an element
 keydown	        User presses a key
 submit	        Form is submitted
@@ -127,9 +125,53 @@ Removing Event Listener (no visible output)<br>
 function greet() {
   alert("Hello!");
 }
-
 const btn = document.getElementById("btn");
 btn.addEventListener("click", greet);
 btn.removeEventListener("click", greet);
 </pre>
+</p>
+<h3>✅ Forms and Inputs in JavaScript</h3>
+<p>Forms and inputs are essential for user interaction in web apps. JavaScript allows you to read, validate, and manipulate form inputs easily.<br> examples:<br></p>
+<pre> HTML:
+ <form id="myForm">
+  <label>Name:</label>
+  <input type="text" id="name" />
+  <br>
+  <label>Age:</label>
+  <input type="number" id="age" />
+  <br>
+  <button type="submit">Submit</button>
+</form>
+<p id="output"></p>
+</pre>
+<pre>  JavaScript:
+ document.getElementById("myForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent page reload
+
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+
+  document.getElementById("output").innerText = `Hello ${name}, you are ${age} years old.`;
+});
+</pre>
+<p>
+ Output:<br>
+Enter "Alice" and "25".<br>
+Click "Submit".<br>
+Output:<br>
+👉 Hello Alice, you are 25 years old.<br>
+</p>
+🔹 Accessing Form Input Values
+Task
+Get value	-->input.value
+Set value	--->input.value = "John"
+Check checkbox	---->checkbox.checked
+Get select option	--->select.value
+<h3>
+ e.preventDefault():
+</h3>
+<p>When working with events (like form submissions or clicks), you often see this line:<br>e.preventDefault();<br>
+**e** stands for event (short for event object).<br>
+**preventDefault()** is a method that prevents the default behavior of the event.<br>
+ f you want to handle the action yourself with JavaScript, you use e.preventDefault() to stop that default behavior.
 </p>
