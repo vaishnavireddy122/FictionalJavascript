@@ -7,10 +7,11 @@ Then it bubbles up to its parent and runs any handlers there.<br>
 Continues up through the ancestors, unless stopped.<br>Example:
 </p>
 <pre>
-<div id="parent">
+<code>
+  <div id="parent">
   <button id="child">Click me</button>
 </div>
-
+</code>
 <script>
   document.getElementById('parent').addEventListener('click', () => {
     console.log('Parent clicked');
